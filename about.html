@@ -49,7 +49,7 @@ var STYLE_PREFIX = 'wsite';
 <script type='text/javascript'><!--
 var IS_ARCHIVE=1;
 (function(jQuery){
-function initFlyouts(){initPublishedFlyoutMenus([{"id":"913807679106901620","title":"Home","url":"index.html","target":""},{"id":"485783966202160037","title":"About","url":"about.html","target":""},{"id":"956431837801352612","title":"Cast","url":"cast.html","target":""}],"485783966202160037","<li><a href=\"#\" data-membership-required=\"\" >{{title}}<\/a><\/li>",'active',false)}
+function initFlyouts(){initPublishedFlyoutMenus([{"id":"913807679106901620","title":"Home","url":"/","target":""},{"id":"485783966202160037","title":"About","url":"about","target":""},{"id":"956431837801352612","title":"Cast","url":"cast","target":""}],"485783966202160037","<li><a href=\"#\" data-membership-required=\"\" >{{title}}<\/a><\/li>",'active',false)}
 if (jQuery) {
 jQuery(document).ready(function() { jQuery(initFlyouts); });
 }else{
@@ -67,7 +67,7 @@ else document.observe('dom:loaded', initFlyouts);
 				<table id="header">
 					<tr>
 						<td id ="logo"><span class='wsite-logo'><span class='wsite-title-placeholder'>&nbsp;</span><span style="display:none">The Sage school Theater company presents...</span></span></td>
-						<td><ul class='wsite-menu-default'><li id='pg913807679106901620'><a href="index.html" data-membership-required="0" >Home</a></li><li id="active"><a href="about.html">About</a></li><li id='pg956431837801352612'><a href="cast.html" data-membership-required="0" >Cast</a></li></ul></td>
+						<td><ul class='wsite-menu-default'><li id='pg913807679106901620'><a href="/" data-membership-required="0" >Home</a></li><li id="active"><a href="about">About</a></li><li id='pg956431837801352612'><a href="cast" data-membership-required="0" >Cast</a></li></ul></td>
 						<!--<td class="search">{search}</td>-->
 					</tr>
 				</table>
