@@ -1,0 +1,21 @@
+
+
+b {
+    padding: 5px;
+}
+#wsite-content {
+    text-align: center;
+    width: 100%;
+}
+#wsite-content p {
+    position: relative;
+    margin: 0px auto;
+    text-align: left;
+    font-size: 2.5vw;
+    line-height: 1.5em;
+    width: 70%;
+}
+
+#wsite-content div {
+    margin: 5px;
+}
