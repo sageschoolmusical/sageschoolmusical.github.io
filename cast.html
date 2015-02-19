@@ -92,14 +92,18 @@ else document.observe('dom:loaded', initFlyouts);
                     var lastCast = null, origCastName = "";;
                     
                     function nameHovered(t_span) {
-                        if(lastCast)
+                        if(lastCast) {
                             lastCast.innerHTML = origCastName;
+                            lastCast.style.fontSize = '12pt';
+                        }
                         
                         origCastName = t_span.innerHTML;
                         lastCast = t_span;
                             
-                        if(t_span.innerHTML.indexOf(" - ") == -1)
-                            t_span.innerHTML += " - " + t_span.getAttribute("data-role");  
+                        if(t_span.innerHTML.indexOf(" - ") == -1) {
+                            t_span.style.fontSize = '16pt';
+                            t_span.innerHTML += " - <span style='color: red;'>" + t_span.getAttribute("data-role") + "</span>";  
+                        }
                         
                     }
                     
@@ -115,15 +119,15 @@ else document.observe('dom:loaded', initFlyouts);
 <br/>
 
 <span data-role="Ensemble" onmouseover="nameHovered(this)">Alyssa Rosenzweig</span><br/>
-<span data-role="Ensemble, Tom Understudy" onmouseover="nameHovered(this)">Jocelyn Olum</span><br/>
-<span data-role="Ensemble, Dori Understudy, George Understudy" onmouseover="nameHovered(this)">Annika Osterlund</span><br/>
-<span data-role="Ensemble, Joe Understudy" onmouseover="nameHovered(this)">Leah Coleman</span><br/>
+<span data-role="Ensemble, Tom U.S." onmouseover="nameHovered(this)">Jocelyn Olum</span><br/>
+<span data-role="Ensemble, Dori U.S., George U.S." onmouseover="nameHovered(this)">Annika Osterlund</span><br/>
+<span data-role="Ensemble, Joe U.S." onmouseover="nameHovered(this)">Leah Coleman</span><br/>
 <span data-role="Ensemble" onmouseover="nameHovered(this)">Happy Doran</span><br/>
 <span data-role="Ensemble" onmouseover="nameHovered(this)">Nataly Kaldawy</span><br/>
 <span data-role="Ensemble" onmouseover="nameHovered(this)">Eleanor Berkenblit</span><br/>
 <span data-role="Ensemble" onmouseover="nameHovered(this)">Nicolas Olson</span><br/>
 <span data-role="Ensemble" onmouseover="nameHovered(this)">Madeleine Petro</span><br/>
-<span data-role="Ensemble, Shulie Understudy" onmouseover="nameHovered(this)">Kasia Perks</span><br/>
+<span data-role="Ensemble, Shulie U.S." onmouseover="nameHovered(this)">Kasia Perks</span><br/>
 <span data-role="Ensemble " onmouseover="nameHovered(this)">Alexandra Tsohandarides</span><br/>
 <span data-role="Ensemble" onmouseover="nameHovered(this)">Isabelle Webhe</span><br/>
 <span data-role="Ensemble" onmouseover="nameHovered(this)">Miles Kodama</span><br/>
