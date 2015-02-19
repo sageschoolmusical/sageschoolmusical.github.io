@@ -89,10 +89,18 @@ else document.observe('dom:loaded', initFlyouts);
    			<div id='wsite-content' class='wsite-elements wsite-not-footer'>
                 
                 <script>
-                
+                    var lastCast = null, origCastName = "";;
+                    
                     function nameHovered(t_span) {
+                        if(lastCast)
+                            lastCast.innerHTML = origCastName;
+                        
+                        origCastName = t_span.innerHTML;
+                        lastCast = t_span;
+                            
                         if(t_span.innerHTML.indexOf(" - ") == -1)
-                            t_span.innerHTML += " - " + t_span.attributes[0].value;   
+                            t_span.innerHTML += " - " + t_span.getAttribute("data-role");  
+                        
                     }
                     
                 </script>
