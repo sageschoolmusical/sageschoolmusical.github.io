@@ -89,23 +89,23 @@ else document.observe('dom:loaded', initFlyouts);
                     function nameHovered(t_span) {
                         if(lastCast) {
                             lastCast.innerHTML = origCastName;
-                            lastCast.style.fontSize = '12pt';
+                            lastCast.style.fontSize = '14pt';
                         }
                         
                         origCastName = t_span.innerHTML;
                         lastCast = t_span;
                             
                         if(t_span.innerHTML.indexOf(" - ") == -1) {
-                            t_span.style.fontSize = '16pt';
+                            t_span.style.fontSize = '18pt';
                             t_span.innerHTML += " - <span style='color: red;'>" + t_span.getAttribute("data-role") + "</span>";  
                         }
                         
                     }
                     
                 </script>
-<div style="">
+<div style="font-size: 14pt; line-height: 1.4;">
 
-    <h3>Leads</h3>
+    <h2>Leads</h2>
  <span data-role="Dori" onmouseover="nameHovered(this)">Evie Coleman</span><br/>
 <span data-role="Dina" onmouseover="nameHovered(this)">Annmarie Khawand</span><br/>
 <span data-role="Joe" onmouseover="nameHovered(this)">Julia McKenzie</span><br/>
@@ -114,7 +114,7 @@ else document.observe('dom:loaded', initFlyouts);
 <span data-role="George" onmouseover="nameHovered(this)">Maeve Slack-Watkins</span><br/>
 
 <br/>
-<h3>Ensemble</h3>
+<h2>Ensemble</h2>
 <span data-role="Ensemble" onmouseover="nameHovered(this)">Alyssa Rosenzweig</span><br/>
 <span data-role="Ensemble, Tom U.S." onmouseover="nameHovered(this)">Jocelyn Olum</span><br/>
 <span data-role="Ensemble, Dori U.S., George U.S." onmouseover="nameHovered(this)">Annika Osterlund</span><br/>
@@ -133,7 +133,7 @@ else document.observe('dom:loaded', initFlyouts);
 <span data-role="Ensemble" onmouseover="nameHovered(this)">Sasha Bates</span><br/>
 
 <br/>
-<h3>Crew</h3>
+<h2>Crew</h2>
 <span data-role="Stage Manager" onmouseover="nameHovered(this)">Rebecca Sheibley</span><br/>
 <span data-role="Crew" onmouseover="nameHovered(this)">Max Kaufman</span><br/>
 <span data-role="Crew" onmouseover="nameHovered(this)">Carter Doran</span><br/>
