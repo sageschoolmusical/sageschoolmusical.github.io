@@ -39,6 +39,22 @@
 body.wsite-background {
     background-attachment: fixed !important;
 }
+    
+#castlist span:hover {
+    font-size: 18pt;
+    position: relative;
+}
+    
+#castlist span:hover:after {
+    content: attr(data-role);
+    display: inline;
+    left: 20px;
+    position: relative;
+    color: #19d09a;
+    font-family: "Bebas";
+    font-size: 14pt;
+}
+    
 </style>
 <script><!--
 var STATIC_BASE = '//cdn1.editmysite.com/';
@@ -82,62 +98,42 @@ else document.observe('dom:loaded', initFlyouts);
     <div id="main-wrap">
         <div class="container">
    			<div id='wsite-content' class='wsite-elements wsite-not-footer'>
-                
-                <script>
-                    var lastCast = null, origCastName = "";;
-                    
-                    function nameHovered(t_span) {
-                        if(lastCast) {
-                            lastCast.innerHTML = origCastName;
-                            lastCast.style.fontSize = '14pt';
-                        }
-                        
-                        origCastName = t_span.innerHTML;
-                        lastCast = t_span;
-                            
-                        if(t_span.innerHTML.indexOf(" - ") == -1) {
-                            t_span.style.fontSize = '18pt';
-                            t_span.innerHTML += " - <span style='color: red;'>" + t_span.getAttribute("data-role") + "</span>";  
-                        }
-                        
-                    }
-                    
-                </script>
-<div style="font-size: 14pt; line-height: 1.4;">
+
+<div style="font-size: 14pt; line-height: 1.4;" id="castlist">
 
     <h2>Leads</h2>
- <span data-role="Dori" onmouseover="nameHovered(this)">Evie Coleman</span><br/>
-<span data-role="Dina" onmouseover="nameHovered(this)">Annmarie Khawand</span><br/>
-<span data-role="Joe" onmouseover="nameHovered(this)">Julia McKenzie</span><br/>
-<span data-role="Shulie" onmouseover="nameHovered(this)">Olivia Miley</span><br/>
-<span data-role="Tom Mizer" onmouseover="nameHovered(this)">Jake Rast</span><br/>
-<span data-role="George" onmouseover="nameHovered(this)">Maeve Slack-Watkins</span><br/>
+ <span data-role="Dori">Evie Coleman</span><br/>
+<span data-role="Dina">Annmarie Khawand</span><br/>
+<span data-role="Joe">Julia McKenzie</span><br/>
+<span data-role="Shulie">Olivia Miley</span><br/>
+<span data-role="Tom Mizer">Jake Rast</span><br/>
+<span data-role="George">Maeve Slack-Watkins</span><br/>
 
 <br/>
 <h2>Ensemble</h2>
-<span data-role="Ensemble" onmouseover="nameHovered(this)">Alyssa Rosenzweig</span><br/>
-<span data-role="Ensemble, Tom U.S." onmouseover="nameHovered(this)">Jocelyn Olum</span><br/>
-<span data-role="Ensemble, Dori U.S., George U.S." onmouseover="nameHovered(this)">Annika Osterlund</span><br/>
-<span data-role="Ensemble, Joe U.S." onmouseover="nameHovered(this)">Leah Coleman</span><br/>
-<span data-role="Ensemble" onmouseover="nameHovered(this)">Happy Doran</span><br/>
-<span data-role="Ensemble" onmouseover="nameHovered(this)">Nataly Kaldawy</span><br/>
-<span data-role="Ensemble" onmouseover="nameHovered(this)">Eleanor Berkenblit</span><br/>
-<span data-role="Ensemble" onmouseover="nameHovered(this)">Nicolas Olson</span><br/>
-<span data-role="Ensemble" onmouseover="nameHovered(this)">Madeleine Petro</span><br/>
-<span data-role="Ensemble, Shulie U.S." onmouseover="nameHovered(this)">Kasia Perks</span><br/>
-<span data-role="Ensemble " onmouseover="nameHovered(this)">Alexandra Tsohandarides</span><br/>
-<span data-role="Ensemble" onmouseover="nameHovered(this)">Isabelle Webhe</span><br/>
-<span data-role="Ensemble" onmouseover="nameHovered(this)">Miles Kodama</span><br/>
-<span data-role="Ensemble" onmouseover="nameHovered(this)">Priya Rajaram</span><br/>
-<span data-role="Ensemble " onmouseover="nameHovered(this)">Jake Backman</span><br/>
-<span data-role="Ensemble" onmouseover="nameHovered(this)">Sasha Bates</span><br/>
+<span data-role="Ensemble">Alyssa Rosenzweig</span><br/>
+<span data-role="Ensemble, Tom U.S.">Jocelyn Olum</span><br/>
+<span data-role="Ensemble, Dori U.S., George U.S." >Annika Osterlund</span><br/>
+<span data-role="Ensemble, Joe U.S." >Leah Coleman</span><br/>
+<span data-role="Ensemble">Happy Doran</span><br/>
+<span data-role="Ensemble">Nataly Kaldawy</span><br/>
+<span data-role="Ensemble">Eleanor Berkenblit</span><br/>
+<span data-role="Ensemble">Nicolas Olson</span><br/>
+<span data-role="Ensemble">Madeleine Petro</span><br/>
+<span data-role="Ensemble, Shulie U.S.">Kasia Perks</span><br/>
+<span data-role="Ensemble ">Alexandra Tsohandarides</span><br/>
+<span data-role="Ensemble">Isabelle Webhe</span><br/>
+<span data-role="Ensemble" >Miles Kodama</span><br/>
+<span data-role="Ensemble" >Priya Rajaram</span><br/>
+<span data-role="Ensemble " >Jake Backman</span><br/>
+<span data-role="Ensemble" >Sasha Bates</span><br/>
 
 <br/>
 <h2>Crew</h2>
-<span data-role="Stage Manager" onmouseover="nameHovered(this)">Rebecca Sheibley</span><br/>
-<span data-role="Crew" onmouseover="nameHovered(this)">Max Kaufman</span><br/>
-<span data-role="Crew" onmouseover="nameHovered(this)">Carter Doran</span><br/>
-<span data-role="Crew" onmouseover="nameHovered(this)">Sam Randall</span><br/>
+<span data-role="Stage Manager" >Rebecca Sheibley</span><br/>
+<span data-role="Crew" >Max Kaufman</span><br/>
+<span data-role="Crew" >Carter Doran</span><br/>
+<span data-role="Crew">Sam Randall</span><br/>
                
 </div>
 </div>
